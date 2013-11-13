@@ -16,6 +16,7 @@ mkdir -p $build_root/.profile.d
 
 # This is to get a custom buildpack. Probably should use profile.d though
 [[ -f "$app_root/.env" ]] && . "$app_root/.env"
+[[ -f "$app_root/.profile.d/app-env.sh" ]] && . "$app_root/.profile.d/app-env.sh"
 
 if [ -n "$BUILDPACK_URL" ]; then
   echo "       Fetching custom buildpack"
